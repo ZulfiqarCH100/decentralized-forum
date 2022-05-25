@@ -15,23 +15,127 @@
       "payable": false,
       "stateMutability": "view",
       "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "posts",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "message",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "likes",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "dislikes",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_message",
+          "type": "string"
+        }
+      ],
+      "name": "makePost",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getPosts",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "internalType": "string",
+              "name": "message",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "likes",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "dislikes",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct forum.Post[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"count\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/forum.sol\":\"forum\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/forum.sol\":{\"keccak256\":\"0xe451e9eadf64544fb0d392315b7150900f9108fe9cdff743ab0ebeb42d5b798c\",\"urls\":[\"bzz-raw://0bbfbd68b80460f6ee0eb879d5f1a9170293114aad44113370563c54bd1571b4\",\"dweb:/ipfs/QmYKxQZ66b2ychLmeqR62Qgiye5nniGVoV2vhq1J4Hudre\"]}},\"version\":1}",
-  "bytecode": "0x6080604052600a600055348015601457600080fd5b506080806100236000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c806306661abd14602d575b600080fd5b60336045565b60408051918252519081900360200190f35b6000548156fea265627a7a723158202bf177561d248b7a545346f12624b66b3a14c3e07d8e0e9df5d46f6b492bacd064736f6c63430005100032",
-  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c806306661abd14602d575b600080fd5b60336045565b60408051918252519081900360200190f35b6000548156fea265627a7a723158202bf177561d248b7a545346f12624b66b3a14c3e07d8e0e9df5d46f6b492bacd064736f6c63430005100032",
-  "sourceMap": "25:46:0:-;;;65:2;45:22;;25:46;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:46:0;;;;;;;",
-  "deployedSourceMap": "25:46:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:46:0;;;;;;;;;;;;;;;;;;;45:22;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;:::o",
-  "source": "pragma solidity ^0.5.0;\n\ncontract forum{\n    uint public count = 10;\n\n}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"count\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getPosts\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"message\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"likes\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"dislikes\",\"type\":\"uint256\"}],\"internalType\":\"struct forum.Post[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"_message\",\"type\":\"string\"}],\"name\":\"makePost\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"posts\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"message\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"likes\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"dislikes\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/forum.sol\":\"forum\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/forum.sol\":{\"keccak256\":\"0x2730c4c1114576abdea85642f5e28814c5926eee3a4dad02dfe0134b2bc62eb9\",\"urls\":[\"bzz-raw://e21a812ebac764f95cd03f1386f22839014a9fdc4289561b511748f993eb33eb\",\"dweb:/ipfs/QmUedcmdi4sYb8Bp9RQYY44tuiNDuBu7Me6zCyHe8TkM6y\"]}},\"version\":1}",
+  "bytecode": "0x60806040526000805534801561001457600080fd5b506107c2806100246000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c806306661abd146100515780630b1e7f831461006f57806341f3004a14610093578063ea00f39d146100a8575b600080fd5b6100596100bb565b604051610066919061064e565b60405180910390f35b61008261007d3660046104df565b6100c1565b60405161006695949392919061065c565b61009b610180565b604051610066919061063d565b6100596100b63660046104a2565b6102ce565b60005481565b6001602081815260009283526040928390208054818401546002808401805488516101009882161598909802600019011691909104601f810186900486028701860190975286865291956001600160a01b0390911694929383018282801561016a5780601f1061013f5761010080835404028352916020019161016a565b820191906000526020600020905b81548152906001019060200180831161014d57829003601f168201915b5050505050908060030154908060040154905085565b6060806000546040519080825280602002602001820160405280156101bf57816020015b6101ac61036d565b8152602001906001900390816101a45790505b50905060005b6000548110156102c757600081815260016020818152604092839020835160a08101855281548152818401546001600160a01b0316818401526002808301805487516101009782161597909702600019011691909104601f8101859004850286018501875280865292959194869492860193909283018282801561028a5780601f1061025f5761010080835404028352916020019161028a565b820191906000526020600020905b81548152906001019060200180831161026d57829003601f168201915b50505050508152602001600382015481526020016004820154815250508383815181106102b357fe5b6020908102919091010152506001016101c5565b5090505b90565b6040805160a081018252600080548083523360208085019182528486018781526060860185905260808601859052928452600180825295842085518155915195820180546001600160a01b0319166001600160a01b0390971696909617909555905180519294919261034692600285019201906103a5565b50606082015160038201556080909101516004909101555050600080546001019081905590565b6040518060a001604052806000815260200160006001600160a01b031681526020016060815260200160008152602001600081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106103e657805160ff1916838001178555610413565b82800160010185558215610413579182015b828111156104135782518255916020019190600101906103f8565b5061041f929150610423565b5090565b6102cb91905b8082111561041f5760008155600101610429565b600082601f83011261044e57600080fd5b813561046161045c826106d6565b6106af565b9150808252602083016020830185838301111561047d57600080fd5b610488838284610722565b50505092915050565b803561049c81610768565b92915050565b6000602082840312156104b457600080fd5b813567ffffffffffffffff8111156104cb57600080fd5b6104d78482850161043d565b949350505050565b6000602082840312156104f157600080fd5b60006104d78484610491565b600061050983836105c5565b9392505050565b61051981610711565b82525050565b600061052a82610704565b6105348185610708565b935083602082028501610546856106fe565b8060005b85811015610580578484038952815161056385826104fd565b945061056e836106fe565b60209a909a019992505060010161054a565b5091979650505050505050565b600061059882610704565b6105a28185610708565b93506105b281856020860161072e565b6105bb8161075e565b9093019392505050565b805160009060a08401906105d98582610634565b5060208301516105ec6020860182610510565b5060408301518482036040860152610604828261058d565b91505060608301516106196060860182610634565b50608083015161062c6080860182610634565b509392505050565b610519816102cb565b60208082528101610509818461051f565b6020810161049c8284610634565b60a0810161066a8288610634565b6106776020830187610510565b8181036040830152610689818661058d565b90506106986060830185610634565b6106a56080830184610634565b9695505050505050565b60405181810167ffffffffffffffff811182821017156106ce57600080fd5b604052919050565b600067ffffffffffffffff8211156106ed57600080fd5b506020601f91909101601f19160190565b60200190565b5190565b90815260200190565b60006001600160a01b03821661049c565b82818337506000910152565b60005b83811015610749578181015183820152602001610731565b83811115610758576000848401525b50505050565b601f01601f191690565b610771816102cb565b811461077c57600080fd5b5056fea365627a7a7231582026230e4dcf0d9a0931b9a603ee0ee1514435554547201024d43c6d9ccce38c1d6c6578706572696d656e74616cf564736f6c63430005100040",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c806306661abd146100515780630b1e7f831461006f57806341f3004a14610093578063ea00f39d146100a8575b600080fd5b6100596100bb565b604051610066919061064e565b60405180910390f35b61008261007d3660046104df565b6100c1565b60405161006695949392919061065c565b61009b610180565b604051610066919061063d565b6100596100b63660046104a2565b6102ce565b60005481565b6001602081815260009283526040928390208054818401546002808401805488516101009882161598909802600019011691909104601f810186900486028701860190975286865291956001600160a01b0390911694929383018282801561016a5780601f1061013f5761010080835404028352916020019161016a565b820191906000526020600020905b81548152906001019060200180831161014d57829003601f168201915b5050505050908060030154908060040154905085565b6060806000546040519080825280602002602001820160405280156101bf57816020015b6101ac61036d565b8152602001906001900390816101a45790505b50905060005b6000548110156102c757600081815260016020818152604092839020835160a08101855281548152818401546001600160a01b0316818401526002808301805487516101009782161597909702600019011691909104601f8101859004850286018501875280865292959194869492860193909283018282801561028a5780601f1061025f5761010080835404028352916020019161028a565b820191906000526020600020905b81548152906001019060200180831161026d57829003601f168201915b50505050508152602001600382015481526020016004820154815250508383815181106102b357fe5b6020908102919091010152506001016101c5565b5090505b90565b6040805160a081018252600080548083523360208085019182528486018781526060860185905260808601859052928452600180825295842085518155915195820180546001600160a01b0319166001600160a01b0390971696909617909555905180519294919261034692600285019201906103a5565b50606082015160038201556080909101516004909101555050600080546001019081905590565b6040518060a001604052806000815260200160006001600160a01b031681526020016060815260200160008152602001600081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106103e657805160ff1916838001178555610413565b82800160010185558215610413579182015b828111156104135782518255916020019190600101906103f8565b5061041f929150610423565b5090565b6102cb91905b8082111561041f5760008155600101610429565b600082601f83011261044e57600080fd5b813561046161045c826106d6565b6106af565b9150808252602083016020830185838301111561047d57600080fd5b610488838284610722565b50505092915050565b803561049c81610768565b92915050565b6000602082840312156104b457600080fd5b813567ffffffffffffffff8111156104cb57600080fd5b6104d78482850161043d565b949350505050565b6000602082840312156104f157600080fd5b60006104d78484610491565b600061050983836105c5565b9392505050565b61051981610711565b82525050565b600061052a82610704565b6105348185610708565b935083602082028501610546856106fe565b8060005b85811015610580578484038952815161056385826104fd565b945061056e836106fe565b60209a909a019992505060010161054a565b5091979650505050505050565b600061059882610704565b6105a28185610708565b93506105b281856020860161072e565b6105bb8161075e565b9093019392505050565b805160009060a08401906105d98582610634565b5060208301516105ec6020860182610510565b5060408301518482036040860152610604828261058d565b91505060608301516106196060860182610634565b50608083015161062c6080860182610634565b509392505050565b610519816102cb565b60208082528101610509818461051f565b6020810161049c8284610634565b60a0810161066a8288610634565b6106776020830187610510565b8181036040830152610689818661058d565b90506106986060830185610634565b6106a56080830184610634565b9695505050505050565b60405181810167ffffffffffffffff811182821017156106ce57600080fd5b604052919050565b600067ffffffffffffffff8211156106ed57600080fd5b506020601f91909101601f19160190565b60200190565b5190565b90815260200190565b60006001600160a01b03821661049c565b82818337506000910152565b60005b83811015610749578181015183820152602001610731565b83811115610758576000848401525b50505050565b601f01601f191690565b610771816102cb565b811461077c57600080fd5b5056fea365627a7a7231582026230e4dcf0d9a0931b9a603ee0ee1514435554547201024d43c6d9ccce38c1d6c6578706572696d656e74616cf564736f6c63430005100040",
+  "sourceMap": "59:644:0:-;;;100:1;80:21;;59:644;8:9:-1;5:2;;;30:1;27;20:12;5:2;59:644:0;;;;;;;",
+  "deployedSourceMap": "59:644:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;59:644:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;80:21;;;:::i;:::-;;;;;;;;;;;;;;;;240:35;;;;;;;;;:::i;:::-;;;;;;;;;;;;467:234;;;:::i;:::-;;;;;;;;287:174;;;;;;;;;:::i;80:21::-;;;;:::o;240:35::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;240:35:0;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;240:35:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;467:234::-;508:13;530:16;560:5;;549:17;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;-1:-1:-1;530:36:0;-1:-1:-1;579:6:0;574:106;595:5;;591:1;:9;574:106;;;619:17;639:8;;;:5;:8;;;;;;;;;659:12;;;;;;;;;;;;;;;-1:-1:-1;;;;;659:12:0;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;659:12:0;;;;;;;;;;;;;;;;;;;;;;;639:8;;659:12;;639:8;;659:12;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:2;662:1;659:5;;;;;;;;;;;;;;;;;:12;-1:-1:-1;602:3:0;;574:106;;;-1:-1:-1;694:2:0;-1:-1:-1;467:234:0;;:::o;287:174::-;376:39;;;;;;;;-1:-1:-1;381:5:0;;376:39;;;388:10;376:39;;;;;;;;;;;;;;;;;;;;;;;;;361:12;;;:5;:12;;;;;;:54;;;;;;;;;;;-1:-1:-1;;;;;;361:54:0;-1:-1:-1;;;;;361:54:0;;;;;;;;;;;;;;-1:-1:-1;;361:12:0;;:54;;;;;;;;;:::i;:::-;-1:-1:-1;361:54:0;;;;;;;;;;;;;;;;;;-1:-1:-1;;;425:7:0;;;;;;;;;287:174::o;59:644::-;;;;;;;;;;;;;;;-1:-1:-1;;;;;59:644:0;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;59:644:0;;;-1:-1:-1;59:644:0;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;6:442:-1;;108:3;101:4;93:6;89:17;85:27;75:2;;126:1;123;116:12;75:2;163:6;150:20;185:65;200:49;242:6;200:49;;;185:65;;;176:74;;270:6;263:5;256:21;306:4;298:6;294:17;339:4;332:5;328:16;374:3;365:6;360:3;356:16;353:25;350:2;;;391:1;388;381:12;350:2;401:41;435:6;430:3;425;401:41;;;68:380;;;;;;;;456:130;523:20;;548:33;523:20;548:33;;;508:78;;;;;593:347;;707:2;695:9;686:7;682:23;678:32;675:2;;;723:1;720;713:12;675:2;758:31;;809:18;798:30;;795:2;;;841:1;838;831:12;795:2;861:63;916:7;907:6;896:9;892:22;861:63;;;851:73;669:271;-1:-1;;;;669:271;947:241;;1051:2;1039:9;1030:7;1026:23;1022:32;1019:2;;;1067:1;1064;1057:12;1019:2;1102:1;1119:53;1164:7;1144:9;1119:53;;1196:221;;1329:82;1407:3;1399:6;1329:82;;;1315:96;1308:109;-1:-1;;;1308:109;1425:103;1498:24;1516:5;1498:24;;;1493:3;1486:37;1480:48;;;1706:976;;1883:70;1947:5;1883:70;;;1966:102;2061:6;2056:3;1966:102;;;1959:109;;2091:3;2133:4;2125:6;2121:17;2116:3;2112:27;2160:72;2226:5;2160:72;;;2252:7;2280:1;2265:378;2290:6;2287:1;2284:13;2265:378;;;2352:9;2346:4;2342:20;2337:3;2330:33;2397:6;2391:13;2419:96;2510:4;2495:13;2419:96;;;2411:104;;2532:76;2601:6;2532:76;;;2631:4;2622:14;;;;;2522:86;-1:-1;;2312:1;2305:9;2265:378;;;-1:-1;2656:4;;1862:820;-1:-1;;;;;;;1862:820;2690:319;;2788:35;2817:5;2788:35;;;2835:61;2889:6;2884:3;2835:61;;;2828:68;;2901:52;2946:6;2941:3;2934:4;2927:5;2923:16;2901:52;;;2974:29;2996:6;2974:29;;;2965:39;;;;2768:241;-1:-1;;;2768:241;3407:1012;3598:23;;3407:1012;;3534:4;3525:14;;;3627:63;3529:3;3598:23;3627:63;;;3554:142;3770:4;3763:5;3759:16;3753:23;3782:63;3839:4;3834:3;3830:14;3816:12;3782:63;;;3706:145;3927:4;3920:5;3916:16;3910:23;3979:3;3973:4;3969:14;3962:4;3957:3;3953:14;3946:38;3999:69;4063:4;4049:12;3999:69;;;3991:77;;3861:219;4154:4;4147:5;4143:16;4137:23;4166:63;4223:4;4218:3;4214:14;4200:12;4166:63;;;4090:145;4312:4;4305:5;4301:16;4295:23;4324:63;4381:4;4376:3;4372:14;4358:12;4324:63;;;-1:-1;4410:4;3507:912;-1:-1;;;3507:912;4426:103;4499:24;4517:5;4499:24;;4656:425;4856:2;4870:47;;;4841:18;;4931:140;4841:18;5057:6;4931:140;;5088:213;5206:2;5191:18;;5220:71;5195:9;5264:6;5220:71;;5308:739;5554:3;5539:19;;5569:71;5543:9;5613:6;5569:71;;;5651:72;5719:2;5708:9;5704:18;5695:6;5651:72;;;5771:9;5765:4;5761:20;5756:2;5745:9;5741:18;5734:48;5796:74;5865:4;5856:6;5796:74;;;5788:82;;5881:72;5949:2;5938:9;5934:18;5925:6;5881:72;;;5964:73;6032:3;6021:9;6017:19;6008:6;5964:73;;;5525:522;;;;;;;;;6054:256;6116:2;6110:9;6142:17;;;6217:18;6202:34;;6238:22;;;6199:62;6196:2;;;6274:1;6271;6264:12;6196:2;6290;6283:22;6094:216;;-1:-1;6094:216;6317:322;;6461:18;6453:6;6450:30;6447:2;;;6493:1;6490;6483:12;6447:2;-1:-1;6624:4;6560;6537:17;;;;-1:-1;;6533:33;6614:15;;6384:255;6646:167;6786:4;6777:14;;6734:79;6820:153;6939:12;;6910:63;7237:194;7371:19;;;7420:4;7411:14;;7364:67;7773:91;;-1:-1;;;;;7933:54;;7835:24;7916:76;8079:145;8160:6;8155:3;8150;8137:30;-1:-1;8216:1;8198:16;;8191:27;8130:94;8233:268;8298:1;8305:101;8319:6;8316:1;8313:13;8305:101;;;8386:11;;;8380:18;8367:11;;;8360:39;8341:2;8334:10;8305:101;;;8421:6;8418:1;8415:13;8412:2;;;8486:1;8477:6;8472:3;8468:16;8461:27;8412:2;8282:219;;;;;8509:97;8597:2;8577:14;-1:-1;;8573:28;;8557:49;8614:117;8683:24;8701:5;8683:24;;;8676:5;8673:35;8663:2;;8722:1;8719;8712:12;8663:2;8657:74;",
+  "source": "pragma solidity ^0.5.0;\npragma experimental ABIEncoderV2;\n\ncontract forum {\n    uint public count = 0;\n\n    struct Post {\n        uint id;\n        address owner;\n        string message;\n        uint likes;\n        uint dislikes;\n    }\n\n    mapping (uint => Post) public posts;\n\n    \n    function makePost(string memory _message) public returns (uint) {\n        posts[count] = Post(count, msg.sender, _message, 0, 0);\n        count++;\n        return count;\n    }\n\n    function getPosts() public view returns (Post[] memory){\n      Post[] memory id = new Post[](count);\n      for (uint i = 0; i < count; i++) {\n          Post storage post = posts[i];\n          id[i] = post;\n      }\n      return id;\n  }\n}\n",
   "sourcePath": "/home/zulfiqar/Documents/project/contract/contracts/forum.sol",
   "ast": {
     "absolutePath": "project:/contracts/forum.sol",
     "exportedSymbols": {
       "forum": [
-        5
+        90
       ]
     },
-    "id": 6,
+    "id": 91,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -46,25 +150,34 @@
         "src": "0:23:0"
       },
       {
+        "id": 2,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "24:33:0"
+      },
+      {
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 5,
+        "id": 90,
         "linearizedBaseContracts": [
-          5
+          90
         ],
         "name": "forum",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 4,
+            "id": 5,
             "name": "count",
             "nodeType": "VariableDeclaration",
-            "scope": 5,
-            "src": "45:22:0",
+            "scope": 90,
+            "src": "80:21:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -72,10 +185,10 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 2,
+              "id": 3,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
-              "src": "45:4:0",
+              "src": "80:4:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -83,37 +196,1076 @@
             },
             "value": {
               "argumentTypes": null,
-              "hexValue": "3130",
-              "id": 3,
+              "hexValue": "30",
+              "id": 4,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "65:2:0",
+              "src": "100:1:0",
               "subdenomination": null,
               "typeDescriptions": {
-                "typeIdentifier": "t_rational_10_by_1",
-                "typeString": "int_const 10"
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
               },
-              "value": "10"
+              "value": "0"
             },
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "forum.Post",
+            "id": 16,
+            "members": [
+              {
+                "constant": false,
+                "id": 7,
+                "name": "id",
+                "nodeType": "VariableDeclaration",
+                "scope": 16,
+                "src": "130:7:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "130:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9,
+                "name": "owner",
+                "nodeType": "VariableDeclaration",
+                "scope": 16,
+                "src": "147:13:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 8,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "147:7:0",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 11,
+                "name": "message",
+                "nodeType": "VariableDeclaration",
+                "scope": 16,
+                "src": "170:14:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 10,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "170:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13,
+                "name": "likes",
+                "nodeType": "VariableDeclaration",
+                "scope": 16,
+                "src": "194:10:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 12,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "194:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 15,
+                "name": "dislikes",
+                "nodeType": "VariableDeclaration",
+                "scope": 16,
+                "src": "214:13:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 14,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "214:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Post",
+            "nodeType": "StructDefinition",
+            "scope": 90,
+            "src": "108:126:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 20,
+            "name": "posts",
+            "nodeType": "VariableDeclaration",
+            "scope": 90,
+            "src": "240:35:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Post_$16_storage_$",
+              "typeString": "mapping(uint256 => struct forum.Post)"
+            },
+            "typeName": {
+              "id": 19,
+              "keyType": {
+                "id": 17,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "249:4:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "240:22:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Post_$16_storage_$",
+                "typeString": "mapping(uint256 => struct forum.Post)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 18,
+                "name": "Post",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 16,
+                "src": "257:4:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Post_$16_storage_ptr",
+                  "typeString": "struct forum.Post"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 45,
+              "nodeType": "Block",
+              "src": "351:110:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 38,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 27,
+                        "name": "posts",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 20,
+                        "src": "361:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Post_$16_storage_$",
+                          "typeString": "mapping(uint256 => struct forum.Post storage ref)"
+                        }
+                      },
+                      "id": 29,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 28,
+                        "name": "count",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5,
+                        "src": "367:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "361:12:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Post_$16_storage",
+                        "typeString": "struct forum.Post storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 31,
+                          "name": "count",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 5,
+                          "src": "381:5:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 32,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 105,
+                            "src": "388:3:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 33,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "388:10:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 34,
+                          "name": "_message",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 22,
+                          "src": "400:8:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 35,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "410:1:0",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        },
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 36,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "413:1:0",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          }
+                        ],
+                        "id": 30,
+                        "name": "Post",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 16,
+                        "src": "376:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_struct$_Post_$16_storage_ptr_$",
+                          "typeString": "type(struct forum.Post storage pointer)"
+                        }
+                      },
+                      "id": 37,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "structConstructorCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "376:39:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Post_$16_memory",
+                        "typeString": "struct forum.Post memory"
+                      }
+                    },
+                    "src": "361:54:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Post_$16_storage",
+                      "typeString": "struct forum.Post storage ref"
+                    }
+                  },
+                  "id": 39,
+                  "nodeType": "ExpressionStatement",
+                  "src": "361:54:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 41,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "425:7:0",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "id": 40,
+                      "name": "count",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5,
+                      "src": "425:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 42,
+                  "nodeType": "ExpressionStatement",
+                  "src": "425:7:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 43,
+                    "name": "count",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 5,
+                    "src": "449:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 26,
+                  "id": 44,
+                  "nodeType": "Return",
+                  "src": "442:12:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 46,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "makePost",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 23,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22,
+                  "name": "_message",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 46,
+                  "src": "305:22:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 21,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "305:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "304:24:0"
+            },
+            "returnParameters": {
+              "id": 26,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 25,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 46,
+                  "src": "345:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 24,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "345:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "344:6:0"
+            },
+            "scope": 90,
+            "src": "287:174:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 88,
+              "nodeType": "Block",
+              "src": "522:179:0",
+              "statements": [
+                {
+                  "assignments": [
+                    55
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 55,
+                      "name": "id",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 88,
+                      "src": "530:16:0",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_Post_$16_memory_$dyn_memory_ptr",
+                        "typeString": "struct forum.Post[]"
+                      },
+                      "typeName": {
+                        "baseType": {
+                          "contractScope": null,
+                          "id": 53,
+                          "name": "Post",
+                          "nodeType": "UserDefinedTypeName",
+                          "referencedDeclaration": 16,
+                          "src": "530:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Post_$16_storage_ptr",
+                            "typeString": "struct forum.Post"
+                          }
+                        },
+                        "id": 54,
+                        "length": null,
+                        "nodeType": "ArrayTypeName",
+                        "src": "530:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Post_$16_storage_$dyn_storage_ptr",
+                          "typeString": "struct forum.Post[]"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 61,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 59,
+                        "name": "count",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5,
+                        "src": "560:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 58,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "NewExpression",
+                      "src": "549:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_objectcreation_pure$_t_uint256_$returns$_t_array$_t_struct$_Post_$16_memory_$dyn_memory_$",
+                        "typeString": "function (uint256) pure returns (struct forum.Post memory[] memory)"
+                      },
+                      "typeName": {
+                        "baseType": {
+                          "contractScope": null,
+                          "id": 56,
+                          "name": "Post",
+                          "nodeType": "UserDefinedTypeName",
+                          "referencedDeclaration": 16,
+                          "src": "553:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Post_$16_storage_ptr",
+                            "typeString": "struct forum.Post"
+                          }
+                        },
+                        "id": 57,
+                        "length": null,
+                        "nodeType": "ArrayTypeName",
+                        "src": "553:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Post_$16_storage_$dyn_storage_ptr",
+                          "typeString": "struct forum.Post[]"
+                        }
+                      }
+                    },
+                    "id": 60,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "549:17:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Post_$16_memory_$dyn_memory",
+                      "typeString": "struct forum.Post memory[] memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "530:36:0"
+                },
+                {
+                  "body": {
+                    "id": 84,
+                    "nodeType": "Block",
+                    "src": "607:73:0",
+                    "statements": [
+                      {
+                        "assignments": [
+                          73
+                        ],
+                        "declarations": [
+                          {
+                            "constant": false,
+                            "id": 73,
+                            "name": "post",
+                            "nodeType": "VariableDeclaration",
+                            "scope": 84,
+                            "src": "619:17:0",
+                            "stateVariable": false,
+                            "storageLocation": "storage",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Post_$16_storage_ptr",
+                              "typeString": "struct forum.Post"
+                            },
+                            "typeName": {
+                              "contractScope": null,
+                              "id": 72,
+                              "name": "Post",
+                              "nodeType": "UserDefinedTypeName",
+                              "referencedDeclaration": 16,
+                              "src": "619:4:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_Post_$16_storage_ptr",
+                                "typeString": "struct forum.Post"
+                              }
+                            },
+                            "value": null,
+                            "visibility": "internal"
+                          }
+                        ],
+                        "id": 77,
+                        "initialValue": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 74,
+                            "name": "posts",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 20,
+                            "src": "639:5:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Post_$16_storage_$",
+                              "typeString": "mapping(uint256 => struct forum.Post storage ref)"
+                            }
+                          },
+                          "id": 76,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 75,
+                            "name": "i",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 63,
+                            "src": "645:1:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "639:8:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Post_$16_storage",
+                            "typeString": "struct forum.Post storage ref"
+                          }
+                        },
+                        "nodeType": "VariableDeclarationStatement",
+                        "src": "619:28:0"
+                      },
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 82,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "argumentTypes": null,
+                            "baseExpression": {
+                              "argumentTypes": null,
+                              "id": 78,
+                              "name": "id",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 55,
+                              "src": "659:2:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_struct$_Post_$16_memory_$dyn_memory_ptr",
+                                "typeString": "struct forum.Post memory[] memory"
+                              }
+                            },
+                            "id": 80,
+                            "indexExpression": {
+                              "argumentTypes": null,
+                              "id": 79,
+                              "name": "i",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 63,
+                              "src": "662:1:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": true,
+                            "nodeType": "IndexAccess",
+                            "src": "659:5:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Post_$16_memory",
+                              "typeString": "struct forum.Post memory"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide": {
+                            "argumentTypes": null,
+                            "id": 81,
+                            "name": "post",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 73,
+                            "src": "667:4:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Post_$16_storage_ptr",
+                              "typeString": "struct forum.Post storage pointer"
+                            }
+                          },
+                          "src": "659:12:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Post_$16_memory",
+                            "typeString": "struct forum.Post memory"
+                          }
+                        },
+                        "id": 83,
+                        "nodeType": "ExpressionStatement",
+                        "src": "659:12:0"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 68,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 66,
+                      "name": "i",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 63,
+                      "src": "591:1:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 67,
+                      "name": "count",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5,
+                      "src": "595:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "591:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 85,
+                  "initializationExpression": {
+                    "assignments": [
+                      63
+                    ],
+                    "declarations": [
+                      {
+                        "constant": false,
+                        "id": 63,
+                        "name": "i",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 85,
+                        "src": "579:6:0",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "typeName": {
+                          "id": 62,
+                          "name": "uint",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "579:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "value": null,
+                        "visibility": "internal"
+                      }
+                    ],
+                    "id": 65,
+                    "initialValue": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 64,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "588:1:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "nodeType": "VariableDeclarationStatement",
+                    "src": "579:10:0"
+                  },
+                  "loopExpression": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 70,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "++",
+                      "prefix": false,
+                      "src": "602:3:0",
+                      "subExpression": {
+                        "argumentTypes": null,
+                        "id": 69,
+                        "name": "i",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 63,
+                        "src": "602:1:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 71,
+                    "nodeType": "ExpressionStatement",
+                    "src": "602:3:0"
+                  },
+                  "nodeType": "ForStatement",
+                  "src": "574:106:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 86,
+                    "name": "id",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 55,
+                    "src": "694:2:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Post_$16_memory_$dyn_memory_ptr",
+                      "typeString": "struct forum.Post memory[] memory"
+                    }
+                  },
+                  "functionReturnParameters": 51,
+                  "id": 87,
+                  "nodeType": "Return",
+                  "src": "687:9:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 89,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPosts",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 47,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "484:2:0"
+            },
+            "returnParameters": {
+              "id": 51,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 89,
+                  "src": "508:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Post_$16_memory_$dyn_memory_ptr",
+                    "typeString": "struct forum.Post[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "contractScope": null,
+                      "id": 48,
+                      "name": "Post",
+                      "nodeType": "UserDefinedTypeName",
+                      "referencedDeclaration": 16,
+                      "src": "508:4:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Post_$16_storage_ptr",
+                        "typeString": "struct forum.Post"
+                      }
+                    },
+                    "id": 49,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "508:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Post_$16_storage_$dyn_storage_ptr",
+                      "typeString": "struct forum.Post[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "507:15:0"
+            },
+            "scope": 90,
+            "src": "467:234:0",
+            "stateMutability": "view",
+            "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 6,
-        "src": "25:46:0"
+        "scope": 91,
+        "src": "59:644:0"
       }
     ],
-    "src": "0:71:0"
+    "src": "0:704:0"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "project:/contracts/forum.sol",
       "exportedSymbols": {
         "forum": [
-          5
+          90
         ]
       }
     },
@@ -133,6 +1285,17 @@
       },
       {
         "attributes": {
+          "literals": [
+            "experimental",
+            "ABIEncoderV2"
+          ]
+        },
+        "id": 2,
+        "name": "PragmaDirective",
+        "src": "24:33:0"
+      },
+      {
+        "attributes": {
           "baseContracts": [
             null
           ],
@@ -143,17 +1306,17 @@
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            5
+            90
           ],
           "name": "forum",
-          "scope": 6
+          "scope": 91
         },
         "children": [
           {
             "attributes": {
               "constant": false,
               "name": "count",
-              "scope": 5,
+              "scope": 90,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256",
@@ -165,41 +1328,1156 @@
                   "name": "uint",
                   "type": "uint256"
                 },
-                "id": 2,
+                "id": 3,
                 "name": "ElementaryTypeName",
-                "src": "45:4:0"
+                "src": "80:4:0"
               },
               {
                 "attributes": {
                   "argumentTypes": null,
-                  "hexvalue": "3130",
+                  "hexvalue": "30",
                   "isConstant": false,
                   "isLValue": false,
                   "isPure": true,
                   "lValueRequested": false,
                   "subdenomination": null,
                   "token": "number",
-                  "type": "int_const 10",
-                  "value": "10"
+                  "type": "int_const 0",
+                  "value": "0"
                 },
-                "id": 3,
+                "id": 4,
                 "name": "Literal",
-                "src": "65:2:0"
+                "src": "100:1:0"
               }
             ],
-            "id": 4,
+            "id": 5,
             "name": "VariableDeclaration",
-            "src": "45:22:0"
+            "src": "80:21:0"
+          },
+          {
+            "attributes": {
+              "canonicalName": "forum.Post",
+              "name": "Post",
+              "scope": 90,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "id",
+                  "scope": 16,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 6,
+                    "name": "ElementaryTypeName",
+                    "src": "130:4:0"
+                  }
+                ],
+                "id": 7,
+                "name": "VariableDeclaration",
+                "src": "130:7:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "owner",
+                  "scope": 16,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "address",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "stateMutability": "nonpayable",
+                      "type": "address"
+                    },
+                    "id": 8,
+                    "name": "ElementaryTypeName",
+                    "src": "147:7:0"
+                  }
+                ],
+                "id": 9,
+                "name": "VariableDeclaration",
+                "src": "147:13:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "message",
+                  "scope": 16,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 10,
+                    "name": "ElementaryTypeName",
+                    "src": "170:6:0"
+                  }
+                ],
+                "id": 11,
+                "name": "VariableDeclaration",
+                "src": "170:14:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "likes",
+                  "scope": 16,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 12,
+                    "name": "ElementaryTypeName",
+                    "src": "194:4:0"
+                  }
+                ],
+                "id": 13,
+                "name": "VariableDeclaration",
+                "src": "194:10:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "dislikes",
+                  "scope": 16,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 14,
+                    "name": "ElementaryTypeName",
+                    "src": "214:4:0"
+                  }
+                ],
+                "id": 15,
+                "name": "VariableDeclaration",
+                "src": "214:13:0"
+              }
+            ],
+            "id": 16,
+            "name": "StructDefinition",
+            "src": "108:126:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "posts",
+              "scope": 90,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(uint256 => struct forum.Post)",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(uint256 => struct forum.Post)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 17,
+                    "name": "ElementaryTypeName",
+                    "src": "249:4:0"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Post",
+                      "referencedDeclaration": 16,
+                      "type": "struct forum.Post"
+                    },
+                    "id": 18,
+                    "name": "UserDefinedTypeName",
+                    "src": "257:4:0"
+                  }
+                ],
+                "id": 19,
+                "name": "Mapping",
+                "src": "240:22:0"
+              }
+            ],
+            "id": 20,
+            "name": "VariableDeclaration",
+            "src": "240:35:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "makePost",
+              "scope": 90,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_message",
+                      "scope": 46,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 21,
+                        "name": "ElementaryTypeName",
+                        "src": "305:6:0"
+                      }
+                    ],
+                    "id": 22,
+                    "name": "VariableDeclaration",
+                    "src": "305:22:0"
+                  }
+                ],
+                "id": 23,
+                "name": "ParameterList",
+                "src": "304:24:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 46,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 24,
+                        "name": "ElementaryTypeName",
+                        "src": "345:4:0"
+                      }
+                    ],
+                    "id": 25,
+                    "name": "VariableDeclaration",
+                    "src": "345:4:0"
+                  }
+                ],
+                "id": 26,
+                "name": "ParameterList",
+                "src": "344:6:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "struct forum.Post storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "struct forum.Post storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 20,
+                                  "type": "mapping(uint256 => struct forum.Post storage ref)",
+                                  "value": "posts"
+                                },
+                                "id": 27,
+                                "name": "Identifier",
+                                "src": "361:5:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 5,
+                                  "type": "uint256",
+                                  "value": "count"
+                                },
+                                "id": 28,
+                                "name": "Identifier",
+                                "src": "367:5:0"
+                              }
+                            ],
+                            "id": 29,
+                            "name": "IndexAccess",
+                            "src": "361:12:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": true,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "struct forum.Post memory",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_address_payable",
+                                      "typeString": "address payable"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_string_memory_ptr",
+                                      "typeString": "string memory"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_rational_0_by_1",
+                                      "typeString": "int_const 0"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_rational_0_by_1",
+                                      "typeString": "int_const 0"
+                                    }
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 16,
+                                  "type": "type(struct forum.Post storage pointer)",
+                                  "value": "Post"
+                                },
+                                "id": 30,
+                                "name": "Identifier",
+                                "src": "376:4:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 5,
+                                  "type": "uint256",
+                                  "value": "count"
+                                },
+                                "id": 31,
+                                "name": "Identifier",
+                                "src": "381:5:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "sender",
+                                  "referencedDeclaration": null,
+                                  "type": "address payable"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 105,
+                                      "type": "msg",
+                                      "value": "msg"
+                                    },
+                                    "id": 32,
+                                    "name": "Identifier",
+                                    "src": "388:3:0"
+                                  }
+                                ],
+                                "id": 33,
+                                "name": "MemberAccess",
+                                "src": "388:10:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 22,
+                                  "type": "string memory",
+                                  "value": "_message"
+                                },
+                                "id": 34,
+                                "name": "Identifier",
+                                "src": "400:8:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "30",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "number",
+                                  "type": "int_const 0",
+                                  "value": "0"
+                                },
+                                "id": 35,
+                                "name": "Literal",
+                                "src": "410:1:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "30",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "number",
+                                  "type": "int_const 0",
+                                  "value": "0"
+                                },
+                                "id": 36,
+                                "name": "Literal",
+                                "src": "413:1:0"
+                              }
+                            ],
+                            "id": 37,
+                            "name": "FunctionCall",
+                            "src": "376:39:0"
+                          }
+                        ],
+                        "id": 38,
+                        "name": "Assignment",
+                        "src": "361:54:0"
+                      }
+                    ],
+                    "id": 39,
+                    "name": "ExpressionStatement",
+                    "src": "361:54:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "++",
+                          "prefix": false,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 5,
+                              "type": "uint256",
+                              "value": "count"
+                            },
+                            "id": 40,
+                            "name": "Identifier",
+                            "src": "425:5:0"
+                          }
+                        ],
+                        "id": 41,
+                        "name": "UnaryOperation",
+                        "src": "425:7:0"
+                      }
+                    ],
+                    "id": 42,
+                    "name": "ExpressionStatement",
+                    "src": "425:7:0"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 26
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 5,
+                          "type": "uint256",
+                          "value": "count"
+                        },
+                        "id": 43,
+                        "name": "Identifier",
+                        "src": "449:5:0"
+                      }
+                    ],
+                    "id": 44,
+                    "name": "Return",
+                    "src": "442:12:0"
+                  }
+                ],
+                "id": 45,
+                "name": "Block",
+                "src": "351:110:0"
+              }
+            ],
+            "id": 46,
+            "name": "FunctionDefinition",
+            "src": "287:174:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getPosts",
+              "scope": 90,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 47,
+                "name": "ParameterList",
+                "src": "484:2:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 89,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "struct forum.Post[]",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "struct forum.Post[]"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "Post",
+                              "referencedDeclaration": 16,
+                              "type": "struct forum.Post"
+                            },
+                            "id": 48,
+                            "name": "UserDefinedTypeName",
+                            "src": "508:4:0"
+                          }
+                        ],
+                        "id": 49,
+                        "name": "ArrayTypeName",
+                        "src": "508:6:0"
+                      }
+                    ],
+                    "id": 50,
+                    "name": "VariableDeclaration",
+                    "src": "508:13:0"
+                  }
+                ],
+                "id": 51,
+                "name": "ParameterList",
+                "src": "507:15:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        55
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "id",
+                          "scope": 88,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "struct forum.Post[]",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "length": null,
+                              "type": "struct forum.Post[]"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "contractScope": null,
+                                  "name": "Post",
+                                  "referencedDeclaration": 16,
+                                  "type": "struct forum.Post"
+                                },
+                                "id": 53,
+                                "name": "UserDefinedTypeName",
+                                "src": "530:4:0"
+                              }
+                            ],
+                            "id": 54,
+                            "name": "ArrayTypeName",
+                            "src": "530:6:0"
+                          }
+                        ],
+                        "id": 55,
+                        "name": "VariableDeclaration",
+                        "src": "530:16:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "struct forum.Post memory[] memory",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "type": "function (uint256) pure returns (struct forum.Post memory[] memory)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "length": null,
+                                  "type": "struct forum.Post[]"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "contractScope": null,
+                                      "name": "Post",
+                                      "referencedDeclaration": 16,
+                                      "type": "struct forum.Post"
+                                    },
+                                    "id": 56,
+                                    "name": "UserDefinedTypeName",
+                                    "src": "553:4:0"
+                                  }
+                                ],
+                                "id": 57,
+                                "name": "ArrayTypeName",
+                                "src": "553:6:0"
+                              }
+                            ],
+                            "id": 58,
+                            "name": "NewExpression",
+                            "src": "549:10:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 5,
+                              "type": "uint256",
+                              "value": "count"
+                            },
+                            "id": 59,
+                            "name": "Identifier",
+                            "src": "560:5:0"
+                          }
+                        ],
+                        "id": 60,
+                        "name": "FunctionCall",
+                        "src": "549:17:0"
+                      }
+                    ],
+                    "id": 61,
+                    "name": "VariableDeclarationStatement",
+                    "src": "530:36:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "assignments": [
+                            63
+                          ]
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "constant": false,
+                              "name": "i",
+                              "scope": 85,
+                              "stateVariable": false,
+                              "storageLocation": "default",
+                              "type": "uint256",
+                              "value": null,
+                              "visibility": "internal"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "name": "uint",
+                                  "type": "uint256"
+                                },
+                                "id": 62,
+                                "name": "ElementaryTypeName",
+                                "src": "579:4:0"
+                              }
+                            ],
+                            "id": 63,
+                            "name": "VariableDeclaration",
+                            "src": "579:6:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "30",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 0",
+                              "value": "0"
+                            },
+                            "id": 64,
+                            "name": "Literal",
+                            "src": "588:1:0"
+                          }
+                        ],
+                        "id": 65,
+                        "name": "VariableDeclarationStatement",
+                        "src": "579:10:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "<",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 63,
+                              "type": "uint256",
+                              "value": "i"
+                            },
+                            "id": 66,
+                            "name": "Identifier",
+                            "src": "591:1:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 5,
+                              "type": "uint256",
+                              "value": "count"
+                            },
+                            "id": 67,
+                            "name": "Identifier",
+                            "src": "595:5:0"
+                          }
+                        ],
+                        "id": 68,
+                        "name": "BinaryOperation",
+                        "src": "591:9:0"
+                      },
+                      {
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "++",
+                              "prefix": false,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 63,
+                                  "type": "uint256",
+                                  "value": "i"
+                                },
+                                "id": 69,
+                                "name": "Identifier",
+                                "src": "602:1:0"
+                              }
+                            ],
+                            "id": 70,
+                            "name": "UnaryOperation",
+                            "src": "602:3:0"
+                          }
+                        ],
+                        "id": 71,
+                        "name": "ExpressionStatement",
+                        "src": "602:3:0"
+                      },
+                      {
+                        "children": [
+                          {
+                            "attributes": {
+                              "assignments": [
+                                73
+                              ]
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "constant": false,
+                                  "name": "post",
+                                  "scope": 84,
+                                  "stateVariable": false,
+                                  "storageLocation": "storage",
+                                  "type": "struct forum.Post",
+                                  "value": null,
+                                  "visibility": "internal"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "contractScope": null,
+                                      "name": "Post",
+                                      "referencedDeclaration": 16,
+                                      "type": "struct forum.Post"
+                                    },
+                                    "id": 72,
+                                    "name": "UserDefinedTypeName",
+                                    "src": "619:4:0"
+                                  }
+                                ],
+                                "id": 73,
+                                "name": "VariableDeclaration",
+                                "src": "619:17:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct forum.Post storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 20,
+                                      "type": "mapping(uint256 => struct forum.Post storage ref)",
+                                      "value": "posts"
+                                    },
+                                    "id": 74,
+                                    "name": "Identifier",
+                                    "src": "639:5:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 63,
+                                      "type": "uint256",
+                                      "value": "i"
+                                    },
+                                    "id": 75,
+                                    "name": "Identifier",
+                                    "src": "645:1:0"
+                                  }
+                                ],
+                                "id": 76,
+                                "name": "IndexAccess",
+                                "src": "639:8:0"
+                              }
+                            ],
+                            "id": 77,
+                            "name": "VariableDeclarationStatement",
+                            "src": "619:28:0"
+                          },
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "=",
+                                  "type": "struct forum.Post memory"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "type": "struct forum.Post memory"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 55,
+                                          "type": "struct forum.Post memory[] memory",
+                                          "value": "id"
+                                        },
+                                        "id": 78,
+                                        "name": "Identifier",
+                                        "src": "659:2:0"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 63,
+                                          "type": "uint256",
+                                          "value": "i"
+                                        },
+                                        "id": 79,
+                                        "name": "Identifier",
+                                        "src": "662:1:0"
+                                      }
+                                    ],
+                                    "id": 80,
+                                    "name": "IndexAccess",
+                                    "src": "659:5:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 73,
+                                      "type": "struct forum.Post storage pointer",
+                                      "value": "post"
+                                    },
+                                    "id": 81,
+                                    "name": "Identifier",
+                                    "src": "667:4:0"
+                                  }
+                                ],
+                                "id": 82,
+                                "name": "Assignment",
+                                "src": "659:12:0"
+                              }
+                            ],
+                            "id": 83,
+                            "name": "ExpressionStatement",
+                            "src": "659:12:0"
+                          }
+                        ],
+                        "id": 84,
+                        "name": "Block",
+                        "src": "607:73:0"
+                      }
+                    ],
+                    "id": 85,
+                    "name": "ForStatement",
+                    "src": "574:106:0"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 51
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 55,
+                          "type": "struct forum.Post memory[] memory",
+                          "value": "id"
+                        },
+                        "id": 86,
+                        "name": "Identifier",
+                        "src": "694:2:0"
+                      }
+                    ],
+                    "id": 87,
+                    "name": "Return",
+                    "src": "687:9:0"
+                  }
+                ],
+                "id": 88,
+                "name": "Block",
+                "src": "522:179:0"
+              }
+            ],
+            "id": 89,
+            "name": "FunctionDefinition",
+            "src": "467:234:0"
           }
         ],
-        "id": 5,
+        "id": 90,
         "name": "ContractDefinition",
-        "src": "25:46:0"
+        "src": "59:644:0"
       }
     ],
-    "id": 6,
+    "id": 91,
     "name": "SourceUnit",
-    "src": "0:71:0"
+    "src": "0:704:0"
   },
   "compiler": {
     "name": "solc",
@@ -209,12 +2487,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xCd4997C7Dc7a8d638942407e4443186AC5Eb266c",
-      "transactionHash": "0x008a66921596fec893a35c26515a3097bd2ff3d66467b90167816d70c107b09c"
+      "address": "0x1742D9daC6333d43185c665DfC4234aaacaD309f",
+      "transactionHash": "0x40a4bed1813204c28bd455afe7d7e684994bc1b892a316d91391d7d4b21b3b92"
     }
   },
   "schemaVersion": "3.4.7",
-  "updatedAt": "2022-05-24T19:06:23.876Z",
+  "updatedAt": "2022-05-25T13:18:16.671Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
