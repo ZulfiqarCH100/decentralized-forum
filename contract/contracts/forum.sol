@@ -6,16 +6,19 @@ contract forum {
 
     struct Post {
         uint256 id;
+        uint ttlComments;
         address owner;
         string message;
         uint256 likes;
         uint256 dislikes;
+        string[] comments;
     }
 
     mapping(uint256 => Post) public posts;
 
     function makePost(string memory _message) public returns (uint256) {
-        posts[count] = Post(count, msg.sender, _message, 0, 0);
+        Post memory p = Post(count, 0, msg.sender, _message, 0, 0, new string[](0));
+        posts[count] = p;
         count++;
         return count;
     }
@@ -46,4 +49,14 @@ contract forum {
             return false;
         }
     }
+
+    function makeComment(uint _postId, string memory _message) public returns (uint) {
+        posts[_postId].comments.push( _message);
+        posts[_postId].ttlComments ++;
+        return 0;
+    }
+
+    function getComments(uint postId) public view returns (string[] memory) {
+        return posts[postId].comments;
+    }    
 }
