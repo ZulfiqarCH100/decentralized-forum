@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./post.css"
 import Web3 from "web3";
 import React from "react";
 import { CONTRACT_ABI, CONTRACT_ADDRESS } from "./config";
@@ -33,41 +34,43 @@ function Post(props) {
     }
 
     return (
-        <div
-            style={{ backgroundColor: "red", margin: "5px", cursor: "pointer" }}
-        >
-            {can_view ? (
-                <div>
-                    <ViewComment
-                        post={props.post.id}
-                        account={account}
-                        forum={forum}
-                    ></ViewComment>
-                    <button onClick={() => setView(false)}>Back</button>
-                </div>
-            ) : (
-                <div>
-                    <h2>{props.post.message}</h2>
-                    <h2>{props.post.owner}</h2>
-                    <h2>
-                        {"Likes: " +
-                            props.post.likes +
-                            " Dislikes: " +
-                            props.post.dislikes}
-                    </h2>
-                    <button onClick={likepost}>Like Post</button>
-                    <button onClick={dislikepost}>Dislike Post</button>
-                    <button
-                        onClick={() => {
-                            console.log("here");
-                            setView(true);
-                        }}
-                    >
-                        Comments
-                    </button>
-                </div>
-            )}
-        </div>
+        <>
+            <div className="mx-5 my-4 text-center">
+                {can_view ? (
+                    <div>
+                        <ViewComment
+                            post={props.post.id}
+                            account={account}
+                            forum={forum}
+                        ></ViewComment>
+                        <button className="btn btn-dark" onClick={() => setView(false)}>Back</button>
+                    </div>
+                ) : (
+                    <div className="cardValue px-4 py-5" >
+                        <h5 className="text-center userId">{props.post.owner}</h5>
+                        <p className="messagePost text-left ml-5 mt-3">{props.post.message}</p>
+                        <p className="likeAndDislike text-left ml-5">
+                            {"Likes: " +
+                                props.post.likes +
+                                " Dislikes: " +
+                                props.post.dislikes}
+                        </p>
+                        <div className="text-left ml-5">
+                            <button className="btn btn-primary buttons mr-1" onClick={likepost}>Like Post</button>
+                            <button className="btn btn-danger buttons mx-1" onClick={dislikepost}>Dislike Post</button>
+                            <button className="btn btn-dark buttons mx-1"
+                                onClick={() => {
+                                    console.log("here");
+                                    setView(true);
+                                }}
+                            >
+                                Comments
+                            </button>
+                        </div>
+                    </div>
+                )}
+            </div>
+        </>
     );
 }
 

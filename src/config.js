@@ -1,227 +1,227 @@
-export const CONTRACT_ADDRESS = "0xFbbD6e734540F0f89bc9E8666Cd463fe646E88EF";
+export const CONTRACT_ADDRESS = "0x0aaD853172A6adb6BDB68DbECbC923139F211890";
 
 export const CONTRACT_ABI = [
     {
-        constant: true,
-        inputs: [],
-        name: "count",
-        outputs: [
+        "constant": true,
+        "inputs": [],
+        "name": "count",
+        "outputs": [
             {
-                internalType: "uint256",
-                name: "",
-                type: "uint256",
-            },
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
         ],
-        payable: false,
-        stateMutability: "view",
-        type: "function",
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
     },
     {
-        constant: true,
-        inputs: [
+        "constant": true,
+        "inputs": [
             {
-                internalType: "uint256",
-                name: "",
-                type: "uint256",
-            },
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
         ],
-        name: "posts",
-        outputs: [
+        "name": "posts",
+        "outputs": [
             {
-                internalType: "uint256",
-                name: "id",
-                type: "uint256",
+                "internalType": "uint256",
+                "name": "id",
+                "type": "uint256"
             },
             {
-                internalType: "uint256",
-                name: "ttlComments",
-                type: "uint256",
+                "internalType": "uint256",
+                "name": "ttlComments",
+                "type": "uint256"
             },
             {
-                internalType: "address",
-                name: "owner",
-                type: "address",
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
             },
             {
-                internalType: "string",
-                name: "message",
-                type: "string",
+                "internalType": "string",
+                "name": "message",
+                "type": "string"
             },
             {
-                internalType: "uint256",
-                name: "likes",
-                type: "uint256",
+                "internalType": "uint256",
+                "name": "likes",
+                "type": "uint256"
             },
             {
-                internalType: "uint256",
-                name: "dislikes",
-                type: "uint256",
-            },
+                "internalType": "uint256",
+                "name": "dislikes",
+                "type": "uint256"
+            }
         ],
-        payable: false,
-        stateMutability: "view",
-        type: "function",
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
     },
     {
-        constant: false,
-        inputs: [
+        "constant": false,
+        "inputs": [
             {
-                internalType: "string",
-                name: "_message",
-                type: "string",
-            },
+                "internalType": "string",
+                "name": "_message",
+                "type": "string"
+            }
         ],
-        name: "makePost",
-        outputs: [
+        "name": "makePost",
+        "outputs": [
             {
-                internalType: "uint256",
-                name: "",
-                type: "uint256",
-            },
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
         ],
-        payable: false,
-        stateMutability: "nonpayable",
-        type: "function",
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
     },
     {
-        constant: true,
-        inputs: [],
-        name: "getPosts",
-        outputs: [
+        "constant": true,
+        "inputs": [],
+        "name": "getPosts",
+        "outputs": [
             {
-                components: [
+                "components": [
                     {
-                        internalType: "uint256",
-                        name: "id",
-                        type: "uint256",
+                        "internalType": "uint256",
+                        "name": "id",
+                        "type": "uint256"
                     },
                     {
-                        internalType: "uint256",
-                        name: "ttlComments",
-                        type: "uint256",
+                        "internalType": "uint256",
+                        "name": "ttlComments",
+                        "type": "uint256"
                     },
                     {
-                        internalType: "address",
-                        name: "owner",
-                        type: "address",
+                        "internalType": "address",
+                        "name": "owner",
+                        "type": "address"
                     },
                     {
-                        internalType: "string",
-                        name: "message",
-                        type: "string",
+                        "internalType": "string",
+                        "name": "message",
+                        "type": "string"
                     },
                     {
-                        internalType: "uint256",
-                        name: "likes",
-                        type: "uint256",
+                        "internalType": "uint256",
+                        "name": "likes",
+                        "type": "uint256"
                     },
                     {
-                        internalType: "uint256",
-                        name: "dislikes",
-                        type: "uint256",
+                        "internalType": "uint256",
+                        "name": "dislikes",
+                        "type": "uint256"
                     },
                     {
-                        internalType: "string[]",
-                        name: "comments",
-                        type: "string[]",
-                    },
+                        "internalType": "string[]",
+                        "name": "comments",
+                        "type": "string[]"
+                    }
                 ],
-                internalType: "struct forum.Post[]",
-                name: "",
-                type: "tuple[]",
-            },
+                "internalType": "struct forum.Post[]",
+                "name": "",
+                "type": "tuple[]"
+            }
         ],
-        payable: false,
-        stateMutability: "view",
-        type: "function",
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
     },
     {
-        constant: false,
-        inputs: [
+        "constant": false,
+        "inputs": [
             {
-                internalType: "uint256",
-                name: "id",
-                type: "uint256",
-            },
+                "internalType": "uint256",
+                "name": "id",
+                "type": "uint256"
+            }
         ],
-        name: "likePost",
-        outputs: [
+        "name": "likePost",
+        "outputs": [
             {
-                internalType: "bool",
-                name: "values",
-                type: "bool",
-            },
+                "internalType": "bool",
+                "name": "values",
+                "type": "bool"
+            }
         ],
-        payable: false,
-        stateMutability: "nonpayable",
-        type: "function",
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
     },
     {
-        constant: false,
-        inputs: [
+        "constant": false,
+        "inputs": [
             {
-                internalType: "uint256",
-                name: "id",
-                type: "uint256",
-            },
+                "internalType": "uint256",
+                "name": "id",
+                "type": "uint256"
+            }
         ],
-        name: "dislikePost",
-        outputs: [
+        "name": "dislikePost",
+        "outputs": [
             {
-                internalType: "bool",
-                name: "values",
-                type: "bool",
-            },
+                "internalType": "bool",
+                "name": "values",
+                "type": "bool"
+            }
         ],
-        payable: false,
-        stateMutability: "nonpayable",
-        type: "function",
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
     },
     {
-        constant: false,
-        inputs: [
+        "constant": false,
+        "inputs": [
             {
-                internalType: "uint256",
-                name: "_postId",
-                type: "uint256",
+                "internalType": "uint256",
+                "name": "_postId",
+                "type": "uint256"
             },
             {
-                internalType: "string",
-                name: "_message",
-                type: "string",
-            },
+                "internalType": "string",
+                "name": "_message",
+                "type": "string"
+            }
         ],
-        name: "makeComment",
-        outputs: [
+        "name": "makeComment",
+        "outputs": [
             {
-                internalType: "uint256",
-                name: "",
-                type: "uint256",
-            },
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
         ],
-        payable: false,
-        stateMutability: "nonpayable",
-        type: "function",
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
     },
     {
-        constant: true,
-        inputs: [
+        "constant": true,
+        "inputs": [
             {
-                internalType: "uint256",
-                name: "postId",
-                type: "uint256",
-            },
+                "internalType": "uint256",
+                "name": "postId",
+                "type": "uint256"
+            }
         ],
-        name: "getComments",
-        outputs: [
+        "name": "getComments",
+        "outputs": [
             {
-                internalType: "string[]",
-                name: "",
-                type: "string[]",
-            },
+                "internalType": "string[]",
+                "name": "",
+                "type": "string[]"
+            }
         ],
-        payable: false,
-        stateMutability: "view",
-        type: "function",
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
     },
 ];

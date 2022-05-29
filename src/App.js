@@ -3,7 +3,7 @@ import Web3 from "web3";
 import React from "react";
 import { CONTRACT_ABI, CONTRACT_ADDRESS } from "./config";
 import Posts from "./Posts";
-
+import "./App.css"
 function App() {
     const [account, setAccount] = useState();
     const [forum, setForum] = useState();
@@ -47,23 +47,30 @@ function App() {
     }
 
     return (
-        <div>
-            Your account is: {account}
-            <h1>Counter is: {counter}</h1>
-            <div>
-                <input
-                    type="text"
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                ></input>
-                <button onClick={post}>Post</button>
+        <>
+            <div className="navDesign font-weight-bold text-center py-3">
+                Welcome back {account}
             </div>
-            <div>
-                <h1>POSTS</h1>
-                <button onClick={load}>Load Posts</button>
-                {isLoaded ? <Posts posts={posts} /> : counter}
+            <div className="hero text-center my-3">
+
+                <div className="cardValue mx-5 py-4 my-5">
+                    <h3 className="text-center mt-2">Add a new Post</h3>
+                    <div className="col">
+                        <input className="py-2 inputArea mr-4 mt-4"
+                            type="text"
+                            value={message}
+                            onChange={(e) => setMessage(e.target.value)}
+                        ></input>
+                        <button className="btn btn-info" onClick={post}>Add Post</button>
+                    </div>
+                </div>
+                <div>
+                    <h1>POSTS</h1>
+                    <button className="btn btn-outline-dark" onClick={load}>Load Previous Posts </button>
+                    {isLoaded ? <Posts posts={posts} /> : counter}
+                </div>
             </div>
-        </div>
+        </>
     );
 }
 

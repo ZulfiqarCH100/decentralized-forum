@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import "./App.css"
 function ViewComment(props) {
     const [comments, setComments] = useState();
     const [toShow, setToShow] = useState(false);
@@ -27,25 +28,26 @@ function ViewComment(props) {
     }
 
     return (
-        <div>
+        <div className="mx-5 my-4 text-center">
             {toShow ? (
-                <div style={{ backgroundColor: "red", margin: "5px" }}>
+                <div >
                     <h2>{props.post.message}</h2>
                     <h2>{props.post.owner}</h2>
-                    <div style={{ color: "white", marginLeft: "50px" }}>
-                        <h3>{comments}</h3>
+                    <div className="text-left messagePost ml-2 commentDiv">
+                        <p>{comments}</p>
                     </div>
                 </div>
             ) : (
-                <h1>{customMessage}</h1>
+                <h3>{customMessage}</h3>
             )}
-
-            <input
+            <div className="col">
+            <input className="mr-3 py-2 inputArea"
                 type="text"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
             ></input>
-            <button onClick={comment}>Post</button>
+            <button className="btn btn-info " onClick={comment}>Add Comment</button>
+            </div>
         </div>
     );
 }
