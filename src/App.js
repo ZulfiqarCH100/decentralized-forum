@@ -11,6 +11,11 @@ function App() {
     const [posts, setPosts] = useState();
     const [message, setMessage] = useState();
     const [isLoaded, setIsLoaded] = useState(false);
+    const [name, setName] = useState();
+    const [bio, setBio] = useState();
+    const [theme, setTheme] = useState();
+    const [userdata, setUserData] = useState([0,0,0,0]);
+    const [userload, setIsUserLoad] = useState(false);
 
     useEffect(() => {
         async function load() {
@@ -46,11 +51,83 @@ function App() {
         setPosts(a, setIsLoaded(true));
     }
 
+    async function userdatafunction (){
+        let a = await forum.methods.getUserInfo().call();
+        setUserData(a);
+        if(userdata===undefined){
+            console.log("Nope");
+        } else {
+            console.log(userdata);
+            var message = document.getElementById('profile');
+            message.style.display = 'block';
+            var message = document.getElementById('show-user-details');
+            message.style.display = 'none';
+            var message = document.getElementById('update-user-btn');
+            message.style.display = 'block';
+        }
+    }
+
+    async function showedituser() {
+        var message = document.getElementById('update-user-btn');
+        message.style.display = 'none';
+        var message = document.getElementById('update-user-fields');
+        message.style.display = 'block';
+    }
+
+    async function updateuser() {
+        var message = document.getElementById('update-user-fields');
+        message.style.display = 'none';
+        let a = await forum.methods.changeUserInfo(name,bio,theme).send({ from: account });
+        userdatafunction();
+    }
+
     return (
         <>
             <div className="navDesign font-weight-bold text-center py-3">
                 Welcome back {account}
             </div>
+
+            {/* User Profile My code */}
+
+            <div className="hero my-3">
+                <div className="cardValue mx-5 py-4 my-5" style={{paddingLeft:"2%"}}>
+                    <button id="show-user-details" className="btn btn-info" onClick={userdatafunction}>User Info</button>
+                    <div id="profile" style={{display:"none"}}>
+                    <h4>User Details</h4>
+                    <p>Name: {userdata[1]}</p>
+                    <p>Bio: {userdata[2]}</p>
+                    <p>Theme: {userdata[3]}</p>
+                    <p>Address: {userdata[0]}</p>
+                    </div>
+                    <button id="update-user-btn" className="btn btn-info" style={{display:"none"}} onClick={showedituser}>Update User Info</button>
+
+                    <div id="update-user-fields" className="" style={{display:"none"}}>
+                        <label>Name:  </label>
+                        <input className="py-2 mr-4 mt-4"
+                            type="text"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                        ></input><br></br>
+                        
+                        <label>Bio:    </label>
+                        <input className="py-2 mr-4 mt-4"
+                            type="text"
+                            value={bio}
+                            onChange={(e) => setBio(e.target.value)}
+                        ></input><br></br>
+
+                        <label>Theme:</label>
+                        <input className="py-2 mr-4 mt-4"
+                            type="text"
+                            value={theme}
+                            onChange={(e) => setTheme(e.target.value)}
+                        ></input><br></br>
+                        <br></br>
+                        <button className="btn btn-info" onClick={updateuser}>Update User</button>
+                    </div>
+                </div>
+            </div>
+
             <div className="hero text-center my-3">
 
                 <div className="cardValue mx-5 py-4 my-5">
