@@ -1,4 +1,4 @@
-export const CONTRACT_ADDRESS = "0xFbbD6e734540F0f89bc9E8666Cd463fe646E88EF";
+export const CONTRACT_ADDRESS = "0xFa2466CF4DaC218aCC733d5855A037538C3A3C25";
 
 export const CONTRACT_ABI = [
     {
@@ -56,6 +56,47 @@ export const CONTRACT_ABI = [
                 internalType: "uint256",
                 name: "dislikes",
                 type: "uint256",
+            },
+        ],
+        payable: false,
+        stateMutability: "view",
+        type: "function",
+    },
+    {
+        constant: true,
+        inputs: [
+            {
+                internalType: "address",
+                name: "",
+                type: "address",
+            },
+        ],
+        name: "users",
+        outputs: [
+            {
+                internalType: "address",
+                name: "userAddress",
+                type: "address",
+            },
+            {
+                internalType: "string",
+                name: "name",
+                type: "string",
+            },
+            {
+                internalType: "string",
+                name: "bio",
+                type: "string",
+            },
+            {
+                internalType: "uint256",
+                name: "themeColor",
+                type: "uint256",
+            },
+            {
+                internalType: "bool",
+                name: "exists",
+                type: "bool",
             },
         ],
         payable: false,
@@ -222,6 +263,94 @@ export const CONTRACT_ABI = [
         ],
         payable: false,
         stateMutability: "view",
+        type: "function",
+    },
+    {
+        constant: true,
+        inputs: [],
+        name: "getUserInfo",
+        outputs: [
+            {
+                components: [
+                    {
+                        internalType: "address",
+                        name: "userAddress",
+                        type: "address",
+                    },
+                    {
+                        internalType: "string",
+                        name: "name",
+                        type: "string",
+                    },
+                    {
+                        internalType: "string",
+                        name: "bio",
+                        type: "string",
+                    },
+                    {
+                        internalType: "uint256",
+                        name: "themeColor",
+                        type: "uint256",
+                    },
+                    {
+                        internalType: "bool",
+                        name: "exists",
+                        type: "bool",
+                    },
+                ],
+                internalType: "struct forum.User",
+                name: "",
+                type: "tuple",
+            },
+        ],
+        payable: false,
+        stateMutability: "view",
+        type: "function",
+    },
+    {
+        constant: true,
+        inputs: [],
+        name: "userExists",
+        outputs: [
+            {
+                internalType: "bool",
+                name: "",
+                type: "bool",
+            },
+        ],
+        payable: false,
+        stateMutability: "view",
+        type: "function",
+    },
+    {
+        constant: false,
+        inputs: [
+            {
+                internalType: "string",
+                name: "name",
+                type: "string",
+            },
+            {
+                internalType: "string",
+                name: "bio",
+                type: "string",
+            },
+            {
+                internalType: "uint256",
+                name: "theme",
+                type: "uint256",
+            },
+        ],
+        name: "changeUserInfo",
+        outputs: [
+            {
+                internalType: "bool",
+                name: "",
+                type: "bool",
+            },
+        ],
+        payable: false,
+        stateMutability: "nonpayable",
         type: "function",
     },
 ];
