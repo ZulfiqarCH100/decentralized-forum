@@ -6,7 +6,7 @@ contract forum {
 
     struct Post {
         uint256 id;
-        uint ttlComments;
+        uint256 ttlComments;
         address owner;
         string message;
         uint256 likes;
@@ -14,10 +14,27 @@ contract forum {
         string[] comments;
     }
 
+    struct User {
+        address userAddress;
+        string name;
+        string bio;
+        uint256 themeColor;
+        bool exists;
+    }
+
     mapping(uint256 => Post) public posts;
+    mapping(address => User) public users;
 
     function makePost(string memory _message) public returns (uint256) {
-        Post memory p = Post(count, 0, msg.sender, _message, 0, 0, new string[](0));
+        Post memory p = Post(
+            count,
+            0,
+            msg.sender,
+            _message,
+            0,
+            0,
+            new string[](0)
+        );
         posts[count] = p;
         count++;
         return count;
@@ -50,13 +67,34 @@ contract forum {
         }
     }
 
-    function makeComment(uint _postId, string memory _message) public returns (uint) {
-        posts[_postId].comments.push( _message);
-        posts[_postId].ttlComments ++;
+    function makeComment(uint256 _postId, string memory _message)
+        public
+        returns (uint256)
+    {
+        posts[_postId].comments.push(_message);
+        posts[_postId].ttlComments++;
         return 0;
     }
 
-    function getComments(uint postId) public view returns (string[] memory) {
+    function getComments(uint256 postId) public view returns (string[] memory) {
         return posts[postId].comments;
-    }    
+    }
+
+    function getUserInfo() public view returns (User memory) {
+        return users[msg.sender];
+    }
+
+    function userExists() public view returns (bool) {
+        if (!users[msg.sender].exists) return false;
+        return true;
+    }
+
+    function changeUserInfo(
+        string memory name,
+        string memory bio,
+        uint256 theme
+    ) public returns (bool) {
+        users[msg.sender] = User(msg.sender, name, bio, theme, true);
+        return true;
+    }
 }
